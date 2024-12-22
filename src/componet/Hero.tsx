@@ -23,7 +23,7 @@ const Hero = () => {
           </div>
           <div className="justify-end">
             <div>
-              <img src="/Hero_program.png" />
+              <img src="./Hero_program.png" />
             </div>
           </div>
         </div>

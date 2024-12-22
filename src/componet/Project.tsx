@@ -10,28 +10,28 @@ const Project = () => {
   const cardList = [
     {
       id: 1,
-      img: "/Project1.jpg",
+      img: "./Project1.jpg",
       name: "Dai-Ichi Insurance Management System",
       description: ["・Create basic design", "・Create Azure Function", "・Testing, Maintenance"],
       technique: "",
     },
     {
       id: 2,
-      img: "/Project2.jpg",
+      img: "./Project2.jpg",
       name: "Staff Management System",
       description: ["・Update basic design", "・Trouble shooting"],
       technique: "",
     },
     {
       id: 3,
-      img: "/Project3.jpg",
+      img: "./Project3.jpg",
       name: "Supply Chain Front-end System",
       description: ["・Update basic design", "・Update UI, receipt layout"],
       technique: "",
     },
     {
       id: 4,
-      img: "/Project4.jpg",
+      img: "./Project4.jpg",
       name: "Hitachi Device Communication System",
       description: [
         "・Update basic design",
@@ -42,7 +42,7 @@ const Project = () => {
     },
     {
       id: 5,
-      img: "/Project5.jpg",
+      img: "./Project5.jpg",
       name: "IHI Staff Management System",
       description: [
         "・Develop a webpage about working hour application",
@@ -52,21 +52,21 @@ const Project = () => {
     },
     {
       id: 6,
-      img: "/Project6.jpg",
+      img: "./Project6.jpg",
       name: "Suica Card Mobile Application",
       description: ["・Fix bugs in the Application UI"],
       technique: "",
     },
     {
       id: 7,
-      img: "/Project7.jpg",
+      img: "./Project7.jpg",
       name: "JASRAC License Fee System",
       description: ["・Develop batch importing income from records companies"],
       technique: "",
     },
     {
       id: 8,
-      img: "/Project8.jpg",
+      img: "./Project8.jpg",
       name: "7 & I holding Staff Management System",
       description: ["・Create basic design", "Develop batch transfer staff data"],
       technique: "",
@@ -102,22 +102,6 @@ const Project = () => {
               <CardList cards={cardList} clickCardEvent={handleClick}></CardList>
             </div>
           )}
-          {/* <div
-            className={selectedPageFlag + " bg-white rounded-md shadow-md min-h-[468px] relative"}
-          >
-            <span className="absolute top-3 right-5 text-18" onClick={() => handleClick(null)}>
-              ✕
-            </span>
-            <div className="w-1/4">{selectedImg}</div>
-            <div className="w-3/4">
-              <div className="p-2 font-bold text-[24px]">{selectedCard?.name}</div>
-              <div className="p-2">
-                {selectedCard?.description.map((i) => (
-                  <div>{i}</div>
-                ))}
-              </div>
-            </div>
-          </div> */}
           {selectedPageFlag && (
             <CardDetail
               handleClick={handleClick}

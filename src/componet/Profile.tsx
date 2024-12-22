@@ -50,7 +50,7 @@ const Profile = () => {
         </div>
         <div className="bg-white rounded-md shadow-md mb-10 ">
           <div>
-            <img src="/Profile.jpg" className="object-cover h-full w-full" />
+            <img src="./Profile.jpg" className="object-cover h-full w-full" />
           </div>
           <div className="p-3">
             {introduction.map((item) => (
