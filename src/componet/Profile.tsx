@@ -28,7 +28,7 @@ const Profile = () => {
         <div className="bg-white rounded-md shadow-md mb-10">
           <span className="grid grid-cols-3 grid-rows-3 content-center ">
             <span className="row-span-3">
-              <img src="/Profile.jpg" className="object-cover w-full" />
+              <img src="./Profile.jpg" className="object-cover w-full" />
             </span>
             <span className="col-span-2 p-5 pb-0">
               {introduction.map((item) => (
