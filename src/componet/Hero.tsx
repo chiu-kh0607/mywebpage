@@ -1,25 +1,29 @@
+import { useTranslation } from "react-i18next";
+
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <div className="font-poppins font-semibold">
       <div className="hidden sm:flex text-black flex flex-row  min-h-screen align-bottom">
         <div className=" w-1/2 h-full items-center md:text-[72px] text-[48px] p-10 pt-[200px]">
           <h1>
-            Hello!
+            {t("hero.greeting")}
             <br />
-            I'm{" "}
+            {t("hero.introduction.0")}{" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-400">
-              Chiu
+              {t("hero.introduction.1")}
             </span>
-            !
+            {t("hero.introduction.2")}
           </h1>
         </div>
         <div className="w-auto h-full items-center p-10 pt-[225px]">
           <div className="text-gray-600 h-full">
-            Thank you for reaching me.
+            {t("hero.description.0")}
             <br />
-            I'm full-stack engineer.
+            {t("hero.description.1")}
             <br />
-            And enquiped skill set for C#, .Net, MySql, SqlServer, AWS, Azure.{" "}
+            {t("hero.description.2")}
+            {t("hero.description.3")}{" "}
           </div>
           <div className="justify-end">
             <div>
@@ -31,23 +35,24 @@ const Hero = () => {
       <div className="flex sm:hidden text-black flex flex-col  min-h-screen align-bottom pt-[60px] ">
         <div className="w-full items-center text-[72px] p-10 ">
           <h1 className="">
-            Hello!
+            {t("hero.greeting")}
             <br />
-            I'm{" "}
+            {t("hero.introduction.0")}{" "}
             <span className=" text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Chiu
+              {t("hero.introduction.1")}
             </span>
-            !
+            {t("hero.introduction.2")}
           </h1>
         </div>
         <div className="w-full items-center p-10 ">
           <span className="text-gray-600">
-            Thank you for reaching me.
+            {t("hero.description.0")}
             <br />
-            I'm full-stack engineer.
+            {t("hero.description.1")}
             <br />
-            And enquiped skill set for C#, .Net,
-            <br /> MySql, SqlServer, AWS, Azure.
+            {t("hero.description.2")}
+            <br />
+            {t("hero.description.3")}
           </span>
         </div>
       </div>

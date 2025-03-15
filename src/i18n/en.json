@@ -1,0 +1,7 @@
+{
+ "hero": {
+    "greeting": "Hello",
+    "introduction": ["I'm","Chiu","!"],
+    "description":["Thank you for reaching me.","I'm full-stack engineer.","And enquiped skill set for C#, .Net,","MySql, SqlServer, AWS, Azure. "]
+  }
+}

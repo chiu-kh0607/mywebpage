@@ -1,18 +1,52 @@
-import { FC, useState } from "react";
+import { FC, useReducer, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-type componentRef = {
-  homeRef: React.MutableRefObject<HTMLDivElement | null>;
-  projRef: React.MutableRefObject<HTMLDivElement | null>;
-  skillRef: React.MutableRefObject<HTMLDivElement | null>;
-  contactRef: React.MutableRefObject<HTMLDivElement | null>;
+import { NavBarType } from "../types/NavBar";
+import { changeLanguage } from "i18next";
+type NavBarProp = {
+  navBarPar: NavBarType;
 };
-const Navbar: FC<componentRef> = ({ homeRef, projRef, skillRef, contactRef }) => {
+const LanguageComponent: FC<any> = ({ changeLanguage }) => {
+  const [toggle, setToggle] = useState(false);
+  return (
+    <div className="pr-5 relative">
+      <div className="flex flex-100" onClick={() => setToggle(!toggle)}>
+        Lang
+      </div>
+      <div
+        className={`${toggle ? `flex` : `hidden`} rounded-xl sidebar right-0 mx-4 my-2 absolute `}
+      >
+        <ul className="list-none flex justify-end items-start flex-1 flex-col">
+          <li
+            key="ja"
+            className="font-poppins font-medium cursor-pointer text-[16px]"
+            onClick={() => {
+              changeLanguage("ja");
+            }}
+          >
+            <a>ja</a>
+          </li>
+          <li
+            key="en"
+            className="font-poppins font-medium cursor-pointer text-[16px]"
+            onClick={() => {
+              changeLanguage("en");
+            }}
+          >
+            <a>en</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
+  const { heroRef, projRef, skillRef, contactRef } = navBarPar;
   const ScrollToHome = () => {
-    if (homeRef.current) {
-      homeRef.current.scrollIntoView();
+    if (heroRef.current) {
+      heroRef.current.scrollIntoView();
       setActive("Home");
     }
   };
@@ -34,9 +68,9 @@ const Navbar: FC<componentRef> = ({ homeRef, projRef, skillRef, contactRef }) =>
       setActive("Contact");
     }
   };
-
   return (
     <nav className="flex flex-row p-6 justify-between items-center fixed top-0 right-0 z-50">
+      <LanguageComponent changeLanguage={changeLanguage} />
       <ul className="list-none sm:flex hidden justify-end items-center flex-100 ">
         <li
           key="Home"

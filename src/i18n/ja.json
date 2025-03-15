@@ -1,0 +1,7 @@
+{
+ "hero": {
+    "greeting": "こんにちは",
+    "introduction": ["","チョウ","です！"],
+    "description":["ご覧いただきありがとうござい.","フルスタックエンジンニア務めています。","C#, .Net, MySql, SqlServer, AWS, Azure","の開発スキル備わっています。",""]
+  }
+}
