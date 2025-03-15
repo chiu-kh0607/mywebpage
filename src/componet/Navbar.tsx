@@ -13,9 +13,7 @@ const LanguageComponent: FC<any> = ({ changeLanguage }) => {
       <div className="flex flex-100" onClick={() => setToggle(!toggle)}>
         Lang
       </div>
-      <div
-        className={`${toggle ? `flex` : `hidden`} rounded-xl sidebar right-0 mx-4 my-2 absolute `}
-      >
+      <div className={`${toggle ? `flex` : `hidden`} rounded-xl sidebar absolute p-2`}>
         <ul className="list-none flex justify-end items-start flex-1 flex-col">
           <li
             key="ja"

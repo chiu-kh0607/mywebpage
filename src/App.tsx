@@ -13,7 +13,7 @@ const App = () => {
   const initialState = {
     language: "en",
   };
-  const [state, dispatch] = useReducer(dispatchReducer, initialState);
+  const [dispatch] = useReducer(dispatchReducer, initialState);
 
   const changeLanguage = (language: string) => {
     dispatch({ type: "CHANGE_LAUNGAGE", payload: language });
