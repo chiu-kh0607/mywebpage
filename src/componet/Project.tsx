@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CardList from "./CardList";
 import { CardItem } from "../types/Card";
 import CardDetail from "./CardDetail";
+import { useTranslation } from "react-i18next";
 
 const Project = () => {
   // const cardList=([
@@ -11,14 +12,14 @@ const Project = () => {
     {
       id: 1,
       img: "./Project1.jpg",
-      name: "Dai-Ichi Insurance Management System",
+      name: "Life Insurance Management System",
       description: ["・Create basic design", "・Create Azure Function", "・Testing, Maintenance"],
       technique: "",
     },
     {
       id: 2,
       img: "./Project2.jpg",
-      name: "Staff Management System",
+      name: "Bank Company's Staff Management System",
       description: ["・Update basic design", "・Trouble shooting"],
       technique: "",
     },
@@ -32,7 +33,7 @@ const Project = () => {
     {
       id: 4,
       img: "./Project4.jpg",
-      name: "Hitachi Device Communication System",
+      name: "Maker Leadership Company's Device Communication System",
       description: [
         "・Update basic design",
         "・Develop batch communicates by TCP message",
@@ -43,7 +44,7 @@ const Project = () => {
     {
       id: 5,
       img: "./Project5.jpg",
-      name: "IHI Staff Management System",
+      name: "Maker Leadership Company's Staff Management System",
       description: [
         "・Develop a webpage about working hour application",
         "・Tune stored procedures",
@@ -53,7 +54,7 @@ const Project = () => {
     {
       id: 6,
       img: "./Project6.jpg",
-      name: "Suica Card Mobile Application",
+      name: "Train Pass Card Mobile Application",
       description: ["・Fix bugs in the Application UI"],
       technique: "",
     },
@@ -67,11 +68,12 @@ const Project = () => {
     {
       id: 8,
       img: "./Project8.jpg",
-      name: "7 & I holding Staff Management System",
+      name: "Convenience store holding Staff Management System",
       description: ["・Create basic design", "Develop batch transfer staff data"],
       technique: "",
     },
   ];
+  const { t } = useTranslation();
   const [selectedCard, setSelectedCard] = useState<CardItem>();
   const [selectedPageFlag, setSelectedPageFlag] = useState(false);
   const handleClick = (card: CardItem | null) => {
@@ -85,16 +87,12 @@ const Project = () => {
     }
   };
   var selectedImg = <img className="h-full w-full object-cover" src={selectedCard?.img} />;
-  useEffect(() => {
-    selectedImg = <img className="h-full w-full object-cover" src={selectedCard?.img} />;
-    console.log({ selectedPageFlag });
-  });
 
   return (
     <div className="font-poppins text-gray-600">
       <div className="flex flex-col text-gray sm:h-screen min-h-screen p-10">
         <div className="flex font-semibold md:text-[72px] text-[48px] pb-14 sm:pb-20">
-          <h1>Project</h1>
+          <h1>{t("app.project")}</h1>
         </div>
         <div>
           {!selectedPageFlag && (

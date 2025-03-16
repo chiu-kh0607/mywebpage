@@ -1,8 +1,9 @@
-import { FC, useReducer, useState } from "react";
+import { FC, useReducer, useState, useTransition } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { NavBarType } from "../types/NavBar";
 import { changeLanguage } from "i18next";
+import { useTranslation } from "react-i18next";
 type NavBarProp = {
   navBarPar: NavBarType;
 };
@@ -39,6 +40,7 @@ const LanguageComponent: FC<any> = ({ changeLanguage }) => {
   );
 };
 const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
+  const { t } = useTranslation();
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const { heroRef, projRef, skillRef, contactRef } = navBarPar;
@@ -77,7 +79,7 @@ const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
           } mr-10`}
           onClick={ScrollToHome}
         >
-          <a>Home</a>
+          <a>{t("app.hero")}</a>
         </li>
         <li
           key="Project"
@@ -86,7 +88,7 @@ const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
           } mr-10`}
           onClick={ScrollToProject}
         >
-          <a>Project</a>
+          <a>{t("app.project")}</a>
         </li>
         <li
           key="Skill"
@@ -95,7 +97,7 @@ const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
           } mr-10`}
           onClick={ScrollToSkill}
         >
-          <a>Skill</a>
+          <a>{t("app.profile")}</a>
         </li>
         <li
           key="Contact"
@@ -104,7 +106,7 @@ const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
           } mr-0`}
           onClick={ScrollToContact}
         >
-          <a>Contact</a>
+          <a>{t("app.contact")}</a>
         </li>
         {/* {navLinks.map((nav, index) => (
           <li
@@ -145,7 +147,7 @@ const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
               }`}
               onClick={ScrollToHome}
             >
-              <a>Home</a>
+              <a>{t("app.hero")}</a>
             </li>
             <li
               key="Project"
@@ -154,7 +156,7 @@ const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
               }`}
               onClick={ScrollToProject}
             >
-              <a>Project</a>
+              <a>{t("app.project")}</a>
             </li>
             <li
               key="Skill"
@@ -163,7 +165,7 @@ const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
               }`}
               onClick={ScrollToSkill}
             >
-              <a>Skill</a>
+              <a>{t("app.profile")}</a>
             </li>
             <li
               key="Contact"
@@ -172,7 +174,7 @@ const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
               }`}
               onClick={ScrollToContact}
             >
-              <a>Contact</a>
+              <a>{t("app.contact")}</a>
             </li>
             {/* {navLinks.map((nav, index) => (
               <li

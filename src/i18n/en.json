@@ -1,7 +1,22 @@
 {
+ "app":{
+  "hero":"Top",
+  "project":"Project",
+  "profile":"Profile",
+  "contact":"Contact"
+ },
  "hero": {
     "greeting": "Hello",
     "introduction": ["I'm","Chiu","!"],
     "description":["Thank you for reaching me.","I'm full-stack engineer.","And enquiped skill set for C#, .Net,","MySql, SqlServer, AWS, Azure. "]
+  },
+  "profile":{
+    "content":["My name is Chiu Kwok Ho. I was born in Hong Kong.","After gradurating with a bachelor's degree in IT from University of West England.I have began my career in Hong Kong 2015. And now, I have 10 years working experience of development. ","I am confidence in developing front-end, back-end, as well as batch and more. Please hover over and explore my skill set below."],
+    "otherSkill":["Chinese","Japanese","English"]
+  },
+  "contact":{
+    "subject":"Subject",
+    "message":"Message",
+    "send":"Send message"
   }
 }

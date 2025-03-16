@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import Skills from "./Skills";
 
 const Profile = () => {
+  const { t } = useTranslation();
   const techniqueSkills = [
     { id: 1, name: "C#, .Net", score: 100, hint: "6 years work experience" },
     { id: 2, name: "SQLServer", score: 90, hint: "4 years work experience" },
@@ -10,20 +12,16 @@ const Profile = () => {
     { id: 5, name: "Azure, AWS", score: 50, hint: "Azure Practioner, AWSSA" },
   ];
   const otherSkills = [
-    { id: 1, name: "Chinese", score: 100, hint: "Natural langurage" },
-    { id: 2, name: "Japanese", score: 80, hint: "JLPT N1" },
-    { id: 3, name: "English", score: 60, hint: "IELTS 700" },
+    { id: 1, name: t("profile.otherSkill.0"), score: 100, hint: "Natural langurage" },
+    { id: 2, name: t("profile.otherSkill.1"), score: 80, hint: "JLPT N1" },
+    { id: 3, name: t("profile.otherSkill.2"), score: 60, hint: "IELTS 700" },
   ];
-  const introduction = [
-    "My name is Chiu Kwok Ho. I was born in Hong Kong. ",
-    "After gradurating with a bachelor's degree in IT from University of West England.I have began my career in Hong Kong 2015. And now, I have 10 years working experience of development. ",
-    "I am confidence in developing front-end, back-end, as well as batch and more. Please hover over and explore my skill set below.",
-  ];
+  const introduction = [t("profile.content.0"), t("profile.content.1"), t("profile.content.2")];
   return (
     <div className="font-poppins text-gray-600">
       <div className="hidden sm:flex flex-col text-gray p-10 h-screen">
         <div className=" font-semibold md:text-[72px] text-[48px] pb-10 ">
-          <h1>Profile</h1>
+          <h1>{t("app.profile")}</h1>
         </div>
         <div className="bg-white rounded-md shadow-md mb-10">
           <span className="grid grid-cols-3 grid-rows-3 content-center ">
@@ -46,7 +44,7 @@ const Profile = () => {
       </div>
       <div className="flex sm:hidden flex-col text-gray-600 p-10">
         <div className=" font-semibold md:text-[72px] text-[48px] pb-10">
-          <h1>Profile</h1>
+          <h1>{t("app.profile")}</h1>
         </div>
         <div className="bg-white rounded-md shadow-md mb-10 ">
           <div>

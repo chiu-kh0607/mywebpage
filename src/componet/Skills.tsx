@@ -4,6 +4,7 @@ type ItemProps = {
   skills: SkillItem[];
 };
 const Skills: React.FC<ItemProps> = ({ skills }) => {
+  console.log({ skills });
   return (
     <div>
       {skills.map((skill) => {
