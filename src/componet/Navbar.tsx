@@ -1,4 +1,4 @@
-import { FC, useReducer, useState, useTransition } from "react";
+import { FC, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { NavBarType } from "../types/NavBar";
