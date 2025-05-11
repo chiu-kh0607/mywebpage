@@ -15,8 +15,78 @@
     "otherSkill":["Chinese","Japanese","English"]
   },
   "contact":{
+    "description":"ご連絡お待ちしております。",
     "subject":"タイトル",
     "message":"内容",
     "send":"送信"
+  },
+  "project":{
+    "description":"挑戦し、活躍する",
+    "subDescription":"ドキュメント、開発、チューニング…多様な業務を挑戦できます。",
+    "cards":[
+    {
+      "id": 1,
+      "img": "./Project1.jpg",
+      "name": "生命保険申請システム",
+      "description": ["・基本設計書改修", "・開発Azure Function", "・テスト、メインテナンス"],
+      "technique": ""
+    },
+    {
+      "id": 2,
+      "img": "./Project2.jpg",
+      "name": "大手銀行の職員管理システム",
+      "description": ["・設計書改修", "・課題調査、課題解消"],
+      "technique": ""
+    },
+    {
+      "id": 3,
+      "img": "./Project3.jpg",
+      "name": "サプライチェーンシステム（フロントエンド）",
+      "description": ["・基本設計書改修", "・画面、見積書更新"],
+      "technique": ""
+    },
+    {
+      "id": 4,
+      "img": "./Project4.jpg",
+      "name": "大手メーカー標準局システム",
+      "description": [
+        "・基本設計書更新",
+        "・TCP交信バッチの開発",
+        "・テスト"
+      ],
+      "technique": ""
+    },
+    {
+      "id": 5,
+      "img": "./Project5.jpg",
+      "name": "大手メーカー職員管理システム",
+      "description": [
+        "・勤怠管理画面の開発",
+        "・ストアドプロシージャ　チューニング"
+      ],
+      "technique": ""
+    },
+    {
+      "id": 6,
+      "img": "./Project6.jpg",
+      "name": "ICガードモバイルアプリ",
+      "description": ["・画面不具合の修正"],
+      "technique": ""
+    },
+    {
+      "id": 7,
+      "img": "./Project7.jpg",
+      "name": "JASRAC入金システム",
+      "description": ["・入金仕様調整"],
+      "technique": ""
+    },
+    {
+      "id": 8,
+      "img": "./Project8.jpg",
+      "name": "コンビニの職員管理システム",
+      "description": ["・基本設計書新規開発", "職員データ移行バッチの開発"],
+      "technique": ""
+    }
+    ]
   }
 }

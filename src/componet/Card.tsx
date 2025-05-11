@@ -1,13 +1,13 @@
 import { CardItem } from "../types/Card";
 type ItemProp = {
   card: CardItem;
-  clickCardEvent: (card: CardItem | null) => void;
+  clickCardEvent: (cardId: number | null) => void;
 };
 const Card: React.FC<ItemProp> = ({ card, clickCardEvent }) => {
   return (
     <div
       className="relative bg-white rounded-md shadow-md h-48"
-      onClick={() => clickCardEvent(card)}
+      onClick={() => clickCardEvent(card.id)}
     >
       <img
         className="absolutive inset-0 z-0 w-full h-full rounded-md "

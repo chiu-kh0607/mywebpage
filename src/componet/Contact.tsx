@@ -7,16 +7,13 @@ const Contact = () => {
 
   const mailTo = "javechiu@gmail.com";
   function sendEmail() {
-    location.href = "mailto:" + mailTo + "?subject=" + { subject } + "&body=" + { body };
+    location.href = "mailto:" + mailTo + "?subject=" + subject + "&body=" + body;
   }
-  useEffect(() => {
-    console.log("mailto:" + mailTo + "?subject=" + { subject } + "&body=" + { body });
-  });
 
   const { t } = useTranslation();
   return (
     <div className="font-poppins text-gray-600">
-      <div className="hidden sm:flex flex-col text-gray p-10 h-screen">
+      {/* <div className="hidden sm:flex flex-col text-gray p-10 h-screen">
         <div className=" font-semibold md:text-[72px] text-[48px]">
           <h1>{t("app.contact")}</h1>
         </div>
@@ -54,45 +51,13 @@ const Contact = () => {
             <br />
             <br />
           </form>
-          {/* <form className=" p-10 ">
-            <div className=" px-10 py-3 pt-5">
-              <label className="w-full">Email</label>
-              <br />
-              <input
-                className="p-2 w-full rounded-md shadow-sm border border-gray-300"
-                id="email"
-                type="text"
-              />
-            </div>
-            <div className=" px-10 py-3">
-              <label className="w-full">Subject</label>
-              <br />
-              <input
-                className="p-2 w-full rounded-md shadow-sm border border-gray-300"
-                id="body"
-                type="text"
-              />
-            </div>
-            <div className=" px-10 py-3">
-              <label className="w-full">Message</label>
-              <br />
-              <textarea
-                rows={5}
-                className="p-2 w-full rounded-md shadow-sm border border-gray-300 resize-none "
-                id="message"
-              />
-            </div>
-            <div className="px-10 pt-5">
-              <span className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-submit">
-                <input type="submit" value="Send message" />
-              </span>
-            </div>
-          </form> */}
         </div>
-      </div>
-      <div className="flex sm:hidden flex-col text-gray p-10 h-screen">
-        <div className=" font-semibold md:text-[72px] text-[48px]">
-          <h1>{t("app.contact")}</h1>
+      </div> */}
+      <div className="flex flex-col text-gray p-10 h-screen">
+        <div className="flex flex-col font-semibold py-14 sm:pb-20 items-start justify-center">
+          <span className=" md:text-[56px] text-[36px] text-grey-500">
+            {t("contact.description")}
+          </span>
         </div>
         <div className="py-13 pt-15">
           <form action="#" method="get">
@@ -117,7 +82,6 @@ const Contact = () => {
                 value={body}
                 onChange={(event) => {
                   setBody(event.target.value);
-                  console.log("mailto:" + mailTo + "?subject=" + { subject } + "&body=" + { body });
                 }}
               />
             </div>
@@ -126,8 +90,6 @@ const Contact = () => {
                 <input type="submit" value={t("contact.send")} onClick={sendEmail} />
               </span>
             </div>
-            <br />
-            <br />
           </form>
         </div>
       </div>

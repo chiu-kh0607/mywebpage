@@ -18,52 +18,27 @@ const Profile = () => {
   ];
   const introduction = [t("profile.content.0"), t("profile.content.1"), t("profile.content.2")];
   return (
-    <div className="font-poppins text-gray-600">
-      <div className="hidden sm:flex flex-col text-gray p-10 h-screen">
-        <div className=" font-semibold md:text-[72px] text-[48px] pb-10 ">
-          <h1>{t("app.profile")}</h1>
-        </div>
-        <div className="bg-white rounded-md shadow-md mb-10">
-          <span className="grid grid-cols-3 grid-rows-3 content-center ">
-            <span className="row-span-3">
-              <img src="./Profile.jpg" className="object-cover w-full" />
-            </span>
-            <span className="col-span-2 p-5 pb-0">
-              {introduction.map((item) => (
-                <p>{item}</p>
-              ))}
-            </span>
-            <span className="p-5 pt-0 row-span-2">
-              <Skills skills={techniqueSkills} />
-            </span>
-            <span className="p-5 pt-0 row-span-2">
-              <Skills skills={otherSkills} />
-            </span>
+    <div className="flex flex-col text-gray-600 min-h-screen p-10 justify-center">
+      {/* <div className=" font-semibold md:text-[72px] text-[48px] py-14 md:text-start text-center">
+        <h1>{t("app.profile")}</h1>
+      </div> */}
+      <div className="bg-white shadow-md mb-10 ">
+        <span className="grid md:grid-cols-3 grid-cols-1 md:grid-rows-3 grid-rows-1 content-center flex">
+          <span className="md:row-span-3 items-center justify-center flex w-full">
+            <img src="./Profile.jpg" className="object-cover w-auto h-full" />
           </span>
-        </div>
-      </div>
-      <div className="flex sm:hidden flex-col text-gray-600 p-10">
-        <div className=" font-semibold md:text-[72px] text-[48px] pb-10">
-          <h1>{t("app.profile")}</h1>
-        </div>
-        <div className="bg-white rounded-md shadow-md mb-10 ">
-          <div>
-            <img src="./Profile.jpg" className="object-cover h-full w-full" />
-          </div>
-          <div className="p-3">
+          <span className="md:col-span-2 col-span-1 md:row-span-1 p-5">
             {introduction.map((item) => (
               <p>{item}</p>
             ))}
-          </div>
-          <span className="grid grid-cols-1 grid-rows-2 content-center ">
-            <span className="p-5">
-              <Skills skills={techniqueSkills} />
-            </span>
-            <span className="p-5 ">
-              <Skills skills={otherSkills} />
-            </span>
           </span>
-        </div>
+          <span className="p-5 p-10 pt-0 md:row-span-2">
+            <Skills skills={techniqueSkills} />
+          </span>
+          <span className="p-5 p-10 md:row-span-2">
+            <Skills skills={otherSkills} />
+          </span>
+        </span>
       </div>
     </div>
   );

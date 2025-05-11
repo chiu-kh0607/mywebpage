@@ -15,8 +15,78 @@
     "otherSkill":["Chinese","Japanese","English"]
   },
   "contact":{
+    "description":"Please feel free to contact me!",
     "subject":"Subject",
     "message":"Message",
     "send":"Send message"
+  },
+  "project":{
+    "description":"Confident in different challenges",
+    "subDescription":"Documenting, Developing, Tunneling... experienced in every roles.",
+    "cards":[
+    {
+      "id": 1,
+      "img": "./Project1.jpg",
+      "name": "Life Insurance Management System",
+      "description": ["・Create basic design", "・Create Azure Function", "・Testing, Maintenance"],
+      "technique": ""
+    },
+    {
+      "id": 2,
+      "img": "./Project2.jpg",
+      "name": "Bank Company's Staff Management System",
+      "description": ["・Update basic design", "・Trouble shooting"],
+      "technique": ""
+    },
+    {
+      "id": 3,
+      "img": "./Project3.jpg",
+      "name": "Supply Chain Front-end System",
+      "description": ["・Update basic design", "・Update UI, receipt layout"],
+      "technique": ""
+    },
+    {
+      "id": 4,
+      "img": "./Project4.jpg",
+      "name": "Maker Leadership Company's Device Communication System",
+      "description": [
+        "・Update basic design",
+        "・Develop batch communicates by TCP message",
+        "・Testing"
+      ],
+      "technique": ""
+    },
+    {
+      "id": 5,
+      "img": "./Project5.jpg",
+      "name": "Maker Leadership Company's Staff Management System",
+      "description": [
+        "・Develop a webpage about working hour application",
+        "・Tune stored procedures"
+      ],
+      "technique": ""
+    },
+    {
+      "id": 6,
+      "img": "./Project6.jpg",
+      "name": "Train Pass Card Mobile Application",
+      "description": ["・Fix bugs in the Application UI"],
+      "technique": ""
+    },
+    {
+      "id": 7,
+      "img": "./Project7.jpg",
+      "name": "JASRAC License Fee System",
+      "description": ["・Develop batch importing income from records companies"],
+      "technique": ""
+    },
+    {
+      "id": 8,
+      "img": "./Project8.jpg",
+      "name": "Convenience store holding Staff Management System",
+      "description": ["・Create basic design", "Develop batch transfer staff data"],
+      "technique": ""
+    }
+    ]
   }
 }

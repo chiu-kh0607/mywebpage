@@ -7,9 +7,9 @@ module.exports = {
     extend: {
       colors: {
         home: "#F4CD93",
-        skill:"#caead5",
-        project:"#F3B6C7",
-        contact: "#CAD1EB",
+        skill:"#F4CD93",
+        project:"#FFFFF2",
+        contact: "#FFFFF2",
         submit:"#6B6F7D",
         control: "#C3D9CA",
         dimWhite: "rgba(255, 255, 255, 0.7)",
