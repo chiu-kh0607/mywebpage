@@ -1,5 +1,4 @@
 import { CardItem } from "../types/Card";
-import { useTranslation } from "react-i18next";
 
 type ItemProp = {
   selectedCardId: number | null;
