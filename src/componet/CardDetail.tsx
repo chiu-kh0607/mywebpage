@@ -1,4 +1,3 @@
-import { useTransition } from "react";
 import { CardItem } from "../types/Card";
 import { useTranslation } from "react-i18next";
 
@@ -8,7 +7,6 @@ type ItemProp = {
   cardList: CardItem[];
 };
 const CardDetail: React.FC<ItemProp> = ({ selectedCardId, handleClick, cardList }) => {
-  const { t } = useTranslation();
   var selectedCard: CardItem | undefined;
   if (selectedCardId != null) {
     selectedCard = cardList.filter((x) => (x.id = selectedCardId))[0];

@@ -1,6 +1,4 @@
 import { FC, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { NavBarType } from "../types/NavBar";
 import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
@@ -10,32 +8,31 @@ type NavBarProp = {
 };
 const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
   const { t } = useTranslation();
-  const [active, setActive] = useState("Home");
-  const [toggle, setToggle] = useState(false);
+  //const [active, setActive] = useState("Home");
   const { heroRef, projRef, skillRef, contactRef } = navBarPar;
   const [isOpen, setIsOpen] = useState(0);
   const ScrollToHome = () => {
     if (heroRef.current) {
       heroRef.current.scrollIntoView();
-      setActive("Home");
+      // setActive("Home");
     }
   };
   const ScrollToProject = () => {
     if (projRef.current) {
       projRef.current.scrollIntoView();
-      setActive("Project");
+      //setActive("Project");
     }
   };
   const ScrollToSkill = () => {
     if (skillRef.current) {
       skillRef.current.scrollIntoView();
-      setActive("Skill");
+      //setActive("Skill");
     }
   };
   const ScrollToContact = () => {
     if (contactRef.current) {
       contactRef.current.scrollIntoView();
-      setActive("Contact");
+      //setActive("Contact");
     }
   };
   const LanguageComponent: FC<any> = ({ changeLanguage }) => {
@@ -120,134 +117,6 @@ const Navbar: FC<NavBarProp> = ({ navBarPar }) => {
       </div>
     </nav>
   );
-  // return (
-  //   <div className="flex fixed top-0 left-0 bg-white z-50 p-6 w-screen justify-end">
-  //     <nav className=" justify-between items-center top-0 right-0">
-  //       <ul className="list-none sm:flex hidden justify-end items-center flex-100 ">
-  //         <li>
-  //           <LanguageComponent changeLanguage={changeLanguage} />
-  //         </li>
-  //         <li
-  //           key="Home"
-  //           className={`font-poppins font-normal cursor-pointer text-[16px] ${
-  //             active === "Home" ? "text-black" : "text-gray-500"
-  //           } mr-10`}
-  //           onClick={ScrollToHome}
-  //         >
-  //           <a>{t("app.hero")}</a>
-  //         </li>
-  //         <li
-  //           key="Project"
-  //           className={`font-poppins font-normal cursor-pointer text-[16px] ${
-  //             active === "Project" ? "text-black" : "text-gray-500"
-  //           } mr-10`}
-  //           onClick={ScrollToProject}
-  //         >
-  //           <a>{t("app.project")}</a>
-  //         </li>
-  //         <li
-  //           key="Skill"
-  //           className={`font-poppins font-normal cursor-pointer text-[16px] ${
-  //             active === "Skill" ? "text-black" : "text-gray-500"
-  //           } mr-10`}
-  //           onClick={ScrollToSkill}
-  //         >
-  //           <a>{t("app.profile")}</a>
-  //         </li>
-  //         <li
-  //           key="Contact"
-  //           className={`font-poppins font-normal cursor-pointer text-[16px] ${
-  //             active === "Contact" ? "text-black" : "text-gray-500"
-  //           } mr-0`}
-  //           onClick={ScrollToContact}
-  //         >
-  //           <a>{t("app.contact")}</a>
-  //         </li>
-  //         {/* {navLinks.map((nav, index) => (
-  //         <li
-  //           key={nav.id}
-  //           className={`font-poppins font-normal cursor-pointer text-[16px] ${
-  //             active === nav.title ? "text-black" : "text-gray-500"
-  //           } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-  //           onClick={() => setActive(nav.title)}
-  //         >
-  //           <a href={`#${nav.id}`}>{nav.title}</a>
-  //         </li>
-  //       ))} */}
-  //       </ul>
-
-  //       <div className="sm:hidden flex flex-100 justify-end items-center">
-  //         <FontAwesomeIcon
-  //           icon={faBars}
-  //           className="w-[28px] h-[28px] object-contain text-black"
-  //           onClick={() => setToggle(!toggle)}
-  //         />
-  //         {/* <img
-  //         src={toggle ? close : menu}
-  //         alt="menu"
-  //         className="w-[28px] h-[28px] object-contain"
-  //         onClick={() => setToggle(!toggle)}
-  //       /> */}
-
-  //         <div
-  //           className={`${
-  //             !toggle ? "hidden" : "flex"
-  //           } p-6 bg-black-gradient absolute top-10 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
-  //         >
-  //           <ul className="list-none flex justify-end items-start flex-1 flex-col">
-  //             <li
-  //               key="Home"
-  //               className={`font-poppins font-medium cursor-pointer text-[16px] mb-4${
-  //                 active === "Home" ? "text-black" : "text-gray-400"
-  //               }`}
-  //               onClick={ScrollToHome}
-  //             >
-  //               <a>{t("app.hero")}</a>
-  //             </li>
-  //             <li
-  //               key="Project"
-  //               className={`font-poppins font-medium cursor-pointer text-[16px] mb-4${
-  //                 active === "Project" ? "text-black" : "text-gray-400"
-  //               }`}
-  //               onClick={ScrollToProject}
-  //             >
-  //               <a>{t("app.project")}</a>
-  //             </li>
-  //             <li
-  //               key="Skill"
-  //               className={`font-poppins font-medium cursor-pointer text-[16px] mb-4${
-  //                 active === "Skill" ? "text-black" : "text-gray-400"
-  //               }`}
-  //               onClick={ScrollToSkill}
-  //             >
-  //               <a>{t("app.profile")}</a>
-  //             </li>
-  //             <li
-  //               key="Contact"
-  //               className={`font-poppins font-medium cursor-pointer text-[16px] mb-4${
-  //                 active === "Contact" ? "text-black" : "text-gray-400"
-  //               }`}
-  //               onClick={ScrollToContact}
-  //             >
-  //               <a>{t("app.contact")}</a>
-  //             </li>
-  //             {/* {navLinks.map((nav, index) => (
-  //             <li
-  //               key={nav.id}
-  //               className={`font-poppins font-medium cursor-pointer text-[16px] ${
-  //                 active === nav.title ? "text-black" : "text-gray-400"
-  //               } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-  //               onClick={() => setActive(nav.title)}
-  //             >
-  //               <a href={`#${nav.id}`}>{nav.title}</a>
-  //             </li>
-  //           ))} */}
-  //           </ul>
-  //         </div>
-  //       </div>
-  //     </nav>
-  //   </div>
-  // );
 };
 
 export default Navbar;

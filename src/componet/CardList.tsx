@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { CardItem } from "../types/Card";
 import Card from "./Card";
 type ItemProps = {
